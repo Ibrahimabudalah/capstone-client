@@ -1,12 +1,19 @@
-import React from 'react'
-import Nav from '../../Components/Nav/Nav'
+import React from "react";
+import { Route, BrowserRouter, Switch } from "react-router-dom";
+import Nav from "../../Components/Nav/Nav";
 
 function Home() {
   return (
-      <div>
-          <Nav />
+    <div>
+      <BrowserRouter>
+        <Nav />
+        <Switch>
+          {/* <Route to="/calculator" component={CalorieCalculator}/> */}
+          {/* <Route to="/mealPlanner" component={MealPlanner}/> */}
+        </Switch>
+      </BrowserRouter>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

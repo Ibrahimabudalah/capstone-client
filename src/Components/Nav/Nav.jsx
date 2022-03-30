@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
@@ -8,13 +9,19 @@ function Nav() {
       </div>
       <div className="nav__right">
         <ul className="nav__list">
-          <li className="nav__item">Home</li>
-          <li className="nav__item">Calorie Calculator</li>
-          <li className="nav__item">Meal Planner</li>
+          <Link to="/">
+            <li className="nav__item">Home</li>
+          </Link>
+          <Link to="/calculator">
+            <li className="nav__item">Calorie Calculator</li>
+          </Link>
+          <Link to="/mealPlanner">
+            <li className="nav__item">Meal Planner</li>
+          </Link>
         </ul>
       </div>
     </div>
   );
 }
 
-export default Nav
+export default Nav;
