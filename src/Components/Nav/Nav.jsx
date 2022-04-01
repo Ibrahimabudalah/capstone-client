@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './Nav.scss'
 
 function Nav() {
   return (
     <div className="nav">
       <div className="nav__left">
-        <h1>YourFitnessPal</h1>
+        <h1 className="nav__title">YourFitnessPal</h1>
       </div>
       <div className="nav__right">
         <ul className="nav__list">
