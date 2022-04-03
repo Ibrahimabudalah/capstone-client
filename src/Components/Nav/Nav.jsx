@@ -6,7 +6,9 @@ function Nav() {
   return (
     <div className="nav">
       <div className="nav__left">
-        <h1 className="nav__title">YourFitnessPal</h1>
+        <Link to="/">
+          <h1 className="nav__title">YourFitnessPal</h1>
+        </Link>
       </div>
       <div className="nav__right">
         <ul className="nav__list">
