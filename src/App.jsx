@@ -3,6 +3,7 @@ import "./App.scss";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 import Home from "../src/pages/Home/Home";
+import MealPlanner from "../src/pages/MealPlanner/MealPlanner"
 import Calculator from "../src/pages/Calculator/Calculator";
 
 class App extends React.Component {
@@ -14,7 +15,7 @@ class App extends React.Component {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/calculator" component={Calculator} />
-            {/* <Route path="/mealPlanner" component={MealPlanner}/> */}
+            <Route path="/mealPlanner" component={MealPlanner}/>
           </Switch>
         </BrowserRouter>
       </div>
