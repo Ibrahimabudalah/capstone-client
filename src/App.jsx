@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.scss";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
-import Nav from "../src/components/Nav/Nav";
-import Home from "../src/pages/Home/Home";
-import MealPlanner from "../src/pages/MealPlanner/MealPlanner";
-import Calculator from "../src/pages/Calculator/Calculator";
-import Login from "../src/pages/Login/Login";
-import Register from "../src/pages/Register/Register";
+import Nav from "../src/Components/Nav/Nav";
+import Home from "../src/Pages/Home/Home";
+import MealPlanner from "../src/Pages/MealPlanner/MealPlanner";
+import Calculator from "../src/Pages/Calculator/Calculator";
+import Login from "../src/Pages/Login/Login";
+import Register from "../src/Pages/Register/Register";
 import { userContext } from "../src/context/userContext";
 
 class App extends React.Component {

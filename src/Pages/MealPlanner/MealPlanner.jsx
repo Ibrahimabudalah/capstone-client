@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import MealList from "../../components/MealList/MealList";
-import Loading from "../../components/Loading/Loading";
+import MealList from "../../Components/MealList/MealList";
+import Loading from "../../Components/Loading/Loading";
 import axios from "../../axiosCalls/axiosCalls";
 import "./MealPlanner.scss";
 
