@@ -37,12 +37,13 @@ export default class Login extends Component {
   render() {
     return (
       <div className="signup">
-        <form onSubmit={(e) => this.submit(e)}>
-          <h3>Register : </h3>
+        <form onSubmit={(e) => this.submit(e)} className="signup__form">
+          <h3 className="signup__text">Register : </h3>
 
           <input
             type="text"
             placeholder="Fullname"
+            className="signup__input"
             name="fullname"
             onChange={({ target: { value, name } }) =>
               this.handleChange(value, name)
@@ -53,6 +54,7 @@ export default class Login extends Component {
           <input
             type="email"
             placeholder="Email"
+            className="signup__input"
             name="email"
             onChange={({ target: { value, name } }) =>
               this.handleChange(value, name)
@@ -63,6 +65,7 @@ export default class Login extends Component {
           <input
             type="password"
             placeholder="Password"
+            className="signup__input"
             name="password"
             onChange={({ target: { value, name } }) =>
               this.handleChange(value, name)
@@ -70,11 +73,11 @@ export default class Login extends Component {
             required
           />
 
-          <button type="submit">Register</button>
+          <button type="submit" className="signup__button">Register</button>
 
           {this.state.err && <span>{this.state.err}</span>}
 
-          <Link to="/login">Already Have an account ?</Link>
+          <Link to="/login" className="signup__link">Already Have an account ?</Link>
         </form>
       </div>
     );

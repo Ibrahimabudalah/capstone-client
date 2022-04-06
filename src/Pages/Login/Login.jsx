@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "../../axiosCalls/axiosCalls";
 import { userContext } from "../../context/userContext";
 
-import "./Login.scss";
+import "../Login/Login.scss";
 
 export default class Login extends Component {
   static contextType = userContext;
@@ -37,12 +37,13 @@ export default class Login extends Component {
   render() {
     return (
       <div className="login">
-        <form onSubmit={(e) => this.submit(e)}>
-          <h3>Login : </h3>
+        <form onSubmit={(e) => this.submit(e)} className="login__form">
+          <h3 className="login__text">Login : </h3>
 
           <input
             type="email"
             placeholder="Email"
+            className="login__input"
             name="email"
             onChange={({ target: { value, name } }) =>
               this.handleChange(value, name)
@@ -53,6 +54,7 @@ export default class Login extends Component {
           <input
             type="password"
             placeholder="Password"
+            className="login__input"
             name="password"
             onChange={({ target: { value, name } }) =>
               this.handleChange(value, name)
@@ -60,11 +62,11 @@ export default class Login extends Component {
             required
           />
 
-          <button type="submit">Login</button>
+          <button type="submit" className="login__button">Login</button>
 
           {this.state.err && <span>{this.state.err}</span>}
 
-          <Link to="/register">Don't Have an account ?</Link>
+          <Link to="/register" className="login__link">Don't Have an account ?</Link>
         </form>
       </div>
     );
