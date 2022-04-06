@@ -1,30 +1,52 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import './Nav.scss'
+import { userContext } from "../../context/userContext";
+import "./Nav.scss";
 
-function Nav() {
-  return (
-    <div className="nav">
-      <div className="nav__left">
-        <Link to="/">
-          <h1 className="nav__title">YourFitnessPal</h1>
-        </Link>
-      </div>
-      <div className="nav__right">
-        <ul className="nav__list">
+export default class Nav extends Component {
+  static contextType = userContext;
+
+  render() {
+    return (
+      <div className="nav">
+        <div className="nav__left">
           <Link to="/">
-            <li className="nav__item">Home</li>
+            <h1 className="nav__title">YourFitnessPal</h1>
           </Link>
-          <Link to="/calculator">
-            <li className="nav__item">Calorie Calculator</li>
-          </Link>
-          <Link to="/mealPlanner">
-            <li className="nav__item">Meal Planner</li>
-          </Link>
-        </ul>
+        </div>
+        <div className="nav__right">
+          <ul className="nav__list">
+            <Link to="/">
+              <li className="nav__item">Home</li>
+            </Link>
+            {this.context.user ? (
+              <>
+                <Link to="/calculator">
+                  <li className="nav__item">Calorie Calculator</li>
+                </Link>
+                <Link to="/mealPlanner">
+                  <li className="nav__item">Meal Planner</li>
+                </Link>
+                <Link to="/" onClick={() => this.context.logout()}>
+                  <li className="nav__item">Logout</li>
+                </Link>
+                <li className="nav__item">
+                  Hello, {this.context.user.fullname}
+                </li>
+              </>
+            ) : (
+              <>
+                <Link to="/login">
+                  <li className="nav__item">Login</li>
+                </Link>
+                <Link to="/register">
+                  <li className="nav__item">Signup</li>
+                </Link>
+              </>
+            )}
+          </ul>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
-
-export default Nav;

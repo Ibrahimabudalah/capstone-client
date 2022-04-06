@@ -1,15 +1,8 @@
 import React, { Component } from "react";
 import MealList from "../../components/MealList/MealList";
 import Loading from "../../components/Loading/Loading";
-import axios from "axios";
+import axios from "../../axiosCalls/axiosCalls";
 import "./MealPlanner.scss";
-
-/*
- * CHANGE USER ID DEPENDING ON YOUR LOGIN SYSTEM
- */
-const userID = 1234;
-
-const serverURI = "http://localhost:8080";
 
 export default class App extends Component {
   constructor(props) {
@@ -24,15 +17,14 @@ export default class App extends Component {
 
   getMealData = async () => {
     this.setState({ loading: true });
-    const { data } = await axios.post(`${serverURI}/getMealData`, {
+    const { data } = await axios.post(`/meal/getMealData`, {
       calories: this.state.calories,
-      userID,
     });
     this.setState({ loading: false, mealData: data });
   };
 
   getSavedUserData = async () => {
-    const { data } = await axios.get(`${serverURI}/getSavedMeal/${userID}`);
+    const { data } = await axios.get(`/meal/getSavedMeals`);
     this.setState({ mealData: data });
   };
 
