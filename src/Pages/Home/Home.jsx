@@ -27,8 +27,9 @@ export default class Home extends Component {
               </div>
             </div>
           ) : (
-            <div>
-              <p></p>
+            <div className="home__container">
+              <p className="home__header">Welcome to YourFitnessPal</p>
+              <p className="home__text-bold">{this.context.user.fullname}</p>
             </div>
           )
         }

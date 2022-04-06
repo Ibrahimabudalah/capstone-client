@@ -1,10 +1,9 @@
-
+@use '../../styles/partials/colors' as *;
 
 .home{
-    // background-image: url(../../Assets/images/background.jpg);
-    background-color: beige;
+    background-color: $beige;
     background-position: center;
-    height: 95vh;
+    height: 91vh;
     &__container{
         width: 80%;
         height: 80%;
@@ -25,12 +24,16 @@
         color: black;
     }
     &__button{
-        background-color: grey;
+        background-color: $grey;
         color: white;
         width: 10rem;
         height: 3rem;
-        border: 1px solid beige;
+        border: 1px solid $beige;
         border-radius:5%;
         margin: 0 1rem;
+    }
+
+    &__text-bold{
+        font-size: 1.5rem;
     }
 }
