@@ -36,22 +36,23 @@ export default class App extends Component {
     return (
       <div className="plan">
         {this.state.loading && <Loading />}
-        <div>
+        <div className="plan__container">
           <input
             type="text"
             placeholder="Calories"
+            className="plan__input"
             value={this.state.calories}
             onChange={({ target }) => this.setState({ calories: target.value })}
           />
-          <button onClick={() => this.getMealData()}>
+          <button onClick={() => this.getMealData()} className="plan__button">
             Get Daily Meal Plan
           </button>
         </div>
-        <section className="plan__container">
+        <section className="plan__list">
           {this.state.mealData.meals ? (
             <MealList mealData={this.state.mealData} />
           ) : (
-            <p>You have no meal list</p>
+            <p className="plan__text">You have no meal list</p>
           )}
         </section>
       </div>
