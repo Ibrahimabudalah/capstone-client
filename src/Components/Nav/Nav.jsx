@@ -30,9 +30,9 @@ export default class Nav extends Component {
                 <Link to="/" onClick={() => this.context.logout()}>
                   <li className="nav__item">Logout</li>
                 </Link>
-                <li className="nav__item">
+                {/* <li className="nav__name">
                   Hello, {this.context.user.fullname}
-                </li>
+                </li> */}
               </>
             ) : (
               <>
