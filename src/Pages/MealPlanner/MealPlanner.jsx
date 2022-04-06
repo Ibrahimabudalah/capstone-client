@@ -42,7 +42,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="plan">
         {this.state.loading && <Loading />}
         <div>
           <input
@@ -55,7 +55,7 @@ export default class App extends Component {
             Get Daily Meal Plan
           </button>
         </div>
-        <section>
+        <section className="plan__container">
           {this.state.mealData.meals ? (
             <MealList mealData={this.state.mealData} />
           ) : (

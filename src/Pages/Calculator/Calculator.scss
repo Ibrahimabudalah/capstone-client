@@ -1,0 +1,60 @@
+@use '../../styles/partials/colors' as *;
+
+
+.calc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    height: 94vh;
+
+    &__form{
+        background-color: white;
+        padding: 3.5rem 5rem;
+        border: 1px solid $grey;
+        border-radius:5px;
+    }
+
+    &__header, &__label{
+        color: $grey;
+        margin: 0;
+    }
+
+    &__input{
+        height:1.5rem;
+        width:15rem;
+        margin: 1rem 0;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        background-color: lightgrey;
+
+        &::placeholder{
+            text-align: center;
+            color: black;
+        }
+    }
+    
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__weight, &__height, &__age{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0.5rem;
+    }
+
+    &__button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:3rem;
+        width:13rem;
+        margin-left: 4.3rem;
+         border: 1px solid $grey;
+        border-radius: 5px;
+    }
+}

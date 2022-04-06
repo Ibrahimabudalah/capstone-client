@@ -1,4 +1,5 @@
 import React from "react";
+import '../Calculator/Calculator.scss'
 
 class Calculator extends React.Component {
   state = {
@@ -135,11 +136,11 @@ class Calculator extends React.Component {
     return (
       <div className="calc">
         <div className="calc__form">
-          <h2>BMR &amp; Daily Calorie Calculator</h2>
+          <h2 className="calc__header">BMR &amp; Daily Calorie Calculator</h2>
           {error}
           <div className="calc__container">
             <label className="calc__label">Gender</label>
-            <div className="calc__containert-two">
+            <div className="calc__container">
               <input
                 type="radio"
                 className="calc__radio"
@@ -172,6 +173,7 @@ class Calculator extends React.Component {
               className="calc__input"
               min="0"
               max="999"
+              placeholder="Please enter your weight in lbs"
             />
           </div>
           <div className="calc__height">
@@ -184,6 +186,7 @@ class Calculator extends React.Component {
               className="calc__input"
               min="0"
               max="8"
+              placeholder="Height in Feet"
             />
             <input
               type="text"
@@ -193,6 +196,7 @@ class Calculator extends React.Component {
               className="calc__input"
               min="0"
               max="100"
+              placeholder="Height in Inches"
             />
           </div>
           <div className="calc__age">
@@ -205,6 +209,7 @@ class Calculator extends React.Component {
               className="calc__input"
               min="0"
               max="120"
+              placeholder="Please enter your age"
             />
           </div>
           <button

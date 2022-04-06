@@ -1,10 +1,14 @@
+@use '../../styles/partials/colors' as *;
+
+
 .nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height:5rem;
     &__title{
-        font-size: 1rem;
-        color: blueviolet;
+        font-size: 1.5rem;
+        color: $grey;
     }
     &__list{
         display: flex;

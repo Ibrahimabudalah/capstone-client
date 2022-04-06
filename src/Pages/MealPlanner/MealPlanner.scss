@@ -1,0 +1,8 @@
+@use '../../styles/partials/colors' as *;
+
+.plan{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
