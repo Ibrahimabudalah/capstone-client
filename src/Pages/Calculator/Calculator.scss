@@ -1,60 +1,116 @@
-@use '../../styles/partials/colors' as *;
+@use "../../styles/partials/colors" as *;
 
+.calc {
+  background-color: beige;
+  padding-top:4rem;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
 
-.calc{
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    padding: 3.5rem 5rem;
+    border: 1px solid $grey;
+    border-radius: 5px;
+  }
+
+  &__header {
+    color: $grey;
+    margin: 0;
+    padding-bottom: 1rem;
+  }
+  &__label,
+  &__result {
+    color: $grey;
+    margin: 0;
+  }
+
+  &__input {
+    height: 1.5rem;
+    width: 15rem;
+    margin: 0.5rem 0;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    background-color: $alabaster;
+
+    &::placeholder {
+      text-align: center;
+      color: black;
+    }
+  }
+
+  &__container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: beige;
-    height: 94vh;
+  }
 
-    &__form{
-        background-color: white;
-        padding: 3.5rem 5rem;
-        border: 1px solid $grey;
-        border-radius:5px;
-    }
+  &__weight,
+  &__height,
+  &__age {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.5rem;
+  }
 
-    &__header, &__label{
-        color: $grey;
-        margin: 0;
-    }
+  &__BMRres{
+      color: $grey;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      &-text{
+          padding-right: 0.5rem;
+      }
+  }
 
-    &__input{
-        height:1.5rem;
-        width:15rem;
-        margin: 1rem 0;
-        border: 1px solid $grey;
-        border-radius: 5px;
-        background-color: lightgrey;
+  &__button {
+    height: 3rem;
+    width: 13rem;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    color: white;
+    background-color: $grey;
+    margin: 1rem 0;
+    &:hover {
+      color: darkgrey;
+    }
+  }
+}
 
-        &::placeholder{
-            text-align: center;
-            color: black;
-        }
-    }
-    
-    &__container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.activity {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5rem;
+  }
 
-    &__weight, &__height, &__age{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 0.5rem;
-    }
+  &__list{
+      margin-bottom: 2rem;
+  }
 
-    &__button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height:3rem;
-        width:13rem;
-        margin-left: 4.3rem;
-         border: 1px solid $grey;
-        border-radius: 5px;
+  &__label {
+      color: $grey;
+      padding-bottom: 0.5rem;
+  }
+
+  &__button {
+    height: 3rem;
+    width: 13rem;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    color: white;
+    background-color: $grey;
+    &:hover {
+      color: darkgrey;
     }
+  }
 }

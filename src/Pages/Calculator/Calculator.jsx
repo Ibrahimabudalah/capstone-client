@@ -122,7 +122,7 @@ class Calculator extends React.Component {
               <option value="1.9" className="activity__item">Extremely Active</option>
             </select>
           </div>
-          <button type="button" onClick={() => this.calculatecalorie()} className="calc__button">
+          <button type="button" onClick={() => this.calculatecalorie()} className="activity__button">
             Calculate Calorie
           </button>
         </div>
@@ -149,7 +149,7 @@ class Calculator extends React.Component {
                 name="gender"
                 value="1"
               />
-              Male
+              <p className="calc__label">Male</p>
               {/* </div> */}
               {/* <label> */}
               <input
@@ -160,7 +160,7 @@ class Calculator extends React.Component {
                 name="gender"
                 value="2"
               />
-              Female
+              <p className="calc__label">Female</p>
             </div>
           </div>
           <div className="calc__weight">
@@ -219,7 +219,10 @@ class Calculator extends React.Component {
           >
             Calculate BMR
           </button>
-          <div className="calc__BMRres">{resultBMR}</div>
+          <div className="calc__BMRres">
+            <p className="calc__BMRres-text">{resultBMR}</p>
+            <p>calories</p>
+          </div>
           <div className="calc__list">{calculateCalories}</div>
           <div className="calc__result">{neededCalories}</div>
         </div>
