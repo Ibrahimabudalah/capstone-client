@@ -130,7 +130,7 @@ class Calculator extends React.Component {
     }
     let neededCalories;
     if (this.state.dailyNeeded) {
-      neededCalories = <div className="calc__result">{this.state.dailyNeeded}</div>;
+      neededCalories = <div className="calc__result">{Math.round(this.state.dailyNeeded)}</div>;
     }
 
     return (
@@ -220,11 +220,17 @@ class Calculator extends React.Component {
             Calculate BMR
           </button>
           <div className="calc__BMRres">
-            <p className="calc__BMRres-text">{resultBMR}</p>
-            <p>calories</p>
+            <p className="calc__BMRres-text">
+              {"Your BMR is "}
+              {resultBMR} 
+            </p>
           </div>
           <div className="calc__list">{calculateCalories}</div>
-          <div className="calc__result">{neededCalories}</div>
+          <div className="calc__result">
+            <p>
+              {neededCalories} {"Calories needed per day"}
+            </p>
+          </div>
         </div>
       </div>
     );
