@@ -17,7 +17,7 @@ export default function Meal({
         <li className="meal__item">Number of servings : {servings} </li>
       </ul>
 
-      <a href={sourceUrl} target="_blank" className="meal__recipe">
+      <a href={sourceUrl} className="meal__recipe">
         Go to Recipe
       </a>
     </article>

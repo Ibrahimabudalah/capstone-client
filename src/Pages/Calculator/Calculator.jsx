@@ -54,9 +54,9 @@ class Calculator extends React.Component {
 
     let bmrCalc = "";
     let height = heightFeet * 30.48 + heightInches * 2.54;
-    if (gender == 2) {
+    if (gender === 2) {
       bmrCalc = 66 + 6.2 * weight + 12.7 * height - 6.76 * age;
-    } else if (gender == 1) {
+    } else if (gender === 1) {
       bmrCalc = 655.1 + 4.35 * weight + 4.7 * height - 4.7 * age;
     }
 
@@ -70,15 +70,15 @@ class Calculator extends React.Component {
     let dailyCarloriesNeeded;
     let selected = this.state.activity;
     let bmr1 = this.state.bmr;
-    if (selected == 1.2) {
+    if (selected === 1.2) {
       dailyCarloriesNeeded = bmr1 * selected;
-    } else if (selected == 1.375) {
+    } else if (selected === 1.375) {
       dailyCarloriesNeeded = bmr1 * selected;
-    } else if (selected == 1.55) {
+    } else if (selected === 1.55) {
       dailyCarloriesNeeded = bmr1 * selected;
-    } else if (selected == 1.725) {
+    } else if (selected === 1.725) {
       dailyCarloriesNeeded = bmr1 * selected;
-    } else if (selected == 1.9) {
+    } else if (selected === 1.9) {
       dailyCarloriesNeeded = bmr1 * selected;
     }
     this.setState({ dailyNeeded: dailyCarloriesNeeded });
