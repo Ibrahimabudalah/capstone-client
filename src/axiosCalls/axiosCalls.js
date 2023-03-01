@@ -3,7 +3,7 @@ import axios from "axios";
 const accessToken = JSON.parse(localStorage.getItem("user"))?.accessToken || "";
 
 const instance = axios.create({
-  baseURL: "https://ubiquitous-bavarois-14c6b2.netlify.app/",
+  baseURL: "https://your-fitness-pal.onrender.com/",
   headers: {
     token: `Bearer ${accessToken}`,
   },
